@@ -1,0 +1,52 @@
+<div class="container">
+
+  <nav class="navbar navbar-light bg-inverse navbar-inverse">
+  <a class="navbar-brand">
+    <img src="./favicon.ico" width="10" height="10" class="d-inline-block align-left" alt="">
+    Angular 2 HTTP POST DATA
+  </a>
+  </nav>
+  <hr/>
+
+  <div class="well">
+    <button (click)="get()">Get Data</button>
+    <hr/>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let dataa of userData'>
+      <th scope="row"> {{dataa.productCode}} </th>
+      <td> {{dataa.productName}} </td>
+      <td> {{dataa.buyPrice}} </td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+ <button (click)="post()" >Post Data</button>
+<hr/>
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let data of userData'>
+      <th scope="row"> {{data.productCode}} </th>
+      <td> {{data.productName}} </td>
+      <td> {{data.buyPrice}} </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
